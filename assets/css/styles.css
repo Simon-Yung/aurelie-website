@@ -1,0 +1,50 @@
+/*whole website */
+body { margin: 0; padding: 0; background-color: #ffffff; }
+
+html { box-sizing: border-box; }
+
+*, *:before, *:after { box-sizing: inherit; }
+
+div { border: 1px dotted red; }
+
+/*text formatting*/
+p, b, small, big, h1 { white-space: normal; text-indent: 0; }
+
+a { text-decoration: none; }
+
+big { font: 500 20px/1.25 "Lora", serif; color: #454545; margin: 0; padding: 0; }
+
+p { font: 400 16px/1.5 "Open Sans", sans-serif; color: #454545; margin: 0; padding: 0; }
+
+b { font: 700 16px/1.5 "Open Sans", sans-serif; color: #454545; margin: 0; padding: 0; }
+
+small { font: 400 12px/10 "Open Sans", sans-serif; color: #454545; margin: 0; padding: 0; display: block; text-align: right; }
+
+space { display: block; height: 20px; }
+
+/*home page*/
+.header_box { height: 80vh; width: 100%; display: flex; align-items: flex-start; justify-content: center; object-fit: cover; background-attachment: fixed; background-position: center; }
+
+.title_box { background-color: rgba(255, 255, 255, 0.6); display: flex; align-items: center; justify-content: center; padding: 2vw 4vw 2vw 4vw; margin-top: 10vh; }
+
+.title_box h1 { font: 900 6vw/1.25 "Lora", serif; color: #000000; margin: 0; padding: 0; }
+
+.banner { background-color: #000000; display: flex; flex-direction: row; flex-wrap: nowrap; align-items: center; justify-content: flex-start; padding: 10px; width: 100%; margin: 0; }
+
+.banner h1 { font: 500 20px/1.25 "Lora", serif; color: #ffffff; margin: 0; padding: 0; }
+
+.front_page_gallery { width: 100%; margin: 0; display: flex; flex-direction: row; justify-content: space-around; align-items: center; }
+
+.front_page_gallery .container { height: 200px; padding: 0; }
+
+.front_page_gallery img { height: 29vw; }
+
+.main_box { /* min-height: 500px;*/ width: 100%; display: flex; flex-direction: row; align-items: flex-start; justify-content: center; flex-wrap: nowrap; padding: 0; object-fit: cover; background-attachment: fixed; background-position: center; }
+
+.main_box .text_div { flex: 35%; background-color: rgba(255, 255, 255, 0.9); height: 100%; padding: 10px; }
+
+.main_box .empty_div { flex: 65%; background-color: rgba(255, 255, 255, 0); height: 100%; }
+
+/* .main_box .right_div .upper_div{ height: 20vh; display: flex; flex-direction: row; align-items: flex-end; justify-content: center; flex-wrap: nowrap; } .main_box .right_div .lower_div{ height: 80vh; display: flex; flex-direction: row; align-items: flex-start; justify-content: center; flex-wrap: nowrap; }*/
+
+/*# sourceMappingURL=styles.css.map */
