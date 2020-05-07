@@ -6,15 +6,17 @@
 
       <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet"> 
       <link rel="stylesheet" href="https://simon-yung.github.io/aurelie-website/assets/css/styles.css">
+      <script src="https://simon-yung.github.io/aurelie-website/assets/js/modal_gallery.js" defer> </script>
   </head>
   <body>
     
 
 <div class="header_banner">
   <div class="title_and_menu">
-    <h1 class="title">
-    AURELIE&nbsp;JEANNIN
-    </h1>
+    <div class="title">
+      <div class="outline"></div>
+      <h1>AURELIE<br>JEANNIN</h1>
+    </div>
     <div class="nav_menu">
       
         <a href="https://simon-yung.github.io/aurelie-website/" style="text-decoration: none" 
@@ -49,34 +51,31 @@
       
     </div>
   </div>
-  <div class="line"></div>
 </div>
     
     <div class="main_box_gallery">
     <div class="gallery_box">
 
-<div style="height:50px"></div>
-
 <div class="gallery">
   <div class="gallery_line">
     <div class="container">
       <div class="thumbnail">
-        <img src="https://simon-yung.github.io/aurelie-website/assets/images/img001.jpg" />
+        <img id="1" src="https://simon-yung.github.io/aurelie-website/assets/images/img001.jpg" alt="Titre" onclick="openModalGallery(1)" />
       </div>
     </div>
     <div class="container">
       <div class="thumbnail">
-        <img src="https://simon-yung.github.io/aurelie-website/assets/images/img002.jpg" />
+        <img id="2" src="https://simon-yung.github.io/aurelie-website/assets/images/img002.jpg" alt="Titre" onclick="openModalGallery(2)" />
       </div>
     </div>
     <div class="container">
       <div class="thumbnail">
-        <img src="https://simon-yung.github.io/aurelie-website/assets/images/img003.jpg" />
+        <img id="3" src="https://simon-yung.github.io/aurelie-website/assets/images/img003.jpg" alt="Titre" onclick="openModalGallery(3)" />
       </div>
     </div>
     <div class="container">
       <div class="thumbnail">
-        <img src="https://simon-yung.github.io/aurelie-website/assets/images/img004.jpg" />
+        <img id="4" src="https://simon-yung.github.io/aurelie-website/assets/images/img004.jpg" alt="Titre" onclick="openModalGallery(4)" />
       </div>
     </div>
   </div>
@@ -126,6 +125,17 @@
   </div>
 </div>
 
+</div>
+
+<!-- The Modalpart -->
+
+<div id="ModalGallery" class="modal">
+  <span class="close" onclick="closeModalGallery()">&times;</span>
+  <img class="modal_content" id="ImgModal" draggable="false" />
+  <div id="Caption"></div>
+  <a class="prev" onclick="nextModal(-1)">&#10094;</a>
+  <a class="next" onclick="nextModal(+1)">&#10095;</a>
+  <a class="info" onclick="toggleInfo()">&nbsp;&nbsp;i&nbsp;&nbsp;</a>
 </div>
 
   </body>
