@@ -12,15 +12,18 @@ a { text-decoration: none; }
 
 h1 { font: 400 50px/1.25 "Roboto Condensed", sans-serif; color: #333333; margin: 0; padding: 0; }
 
-big { font: 300 20px/1.25 "Roboto Condensed", sans-serif; color: #333333; margin: 0; padding: 0; }
+big { font: 400 20px/1.25 "Roboto Condensed", sans-serif; color: #333333; margin: 0; padding: 0; }
 
-p { font: 300 16px/1.5 "Roboto Condensed", sans-serif; color: #333333; margin: 0; padding: 0; }
+p { font: 400 16px/1.5 "Roboto Condensed", sans-serif; color: #333333; margin: 0; padding: 0; }
 
 b { font: 700 16px/1.5 "Roboto Condensed", sans-serif; color: #333333; margin: 0; padding: 0; }
 
 small { font: 300 12px/10 "Roboto Condensed", sans-serif; color: #333333; margin: 0; padding: 0; display: block; text-align: right; }
 
+/*body fromatting*/
 .home_box { width: 100%; min-height: 80vh; flex-direction: row; display: flex; align-items: flex-start; justify-content: center; }
+
+.main_box_menu { position: relative; width: 100%; min-height: 80vh; display: flex; flex-direction: row; align-items: center; justify-content: center; }
 
 .main_box_gallery { width: 100%; display: flex; flex-direction: row; flex-wrap: nowrap; }
 
@@ -29,49 +32,72 @@ small { font: 300 12px/10 "Roboto Condensed", sans-serif; color: #333333; margin
 .background_image { position: fixed; top: 0; left: 0; min-height: 100%; min-width: 100%; z-index: -1; opacity: 1; }
 
 /*header*/
-.header_banner { display: flex; flex-direction: column; background-color: #ffffff; height: 85px; }
+.header_banner { display: flex; flex-direction: column; background-color: #ffffff; height: 70px; }
 
 .header_banner .title_and_menu { width: 100%; display: flex; flex-direction: row; flex-wrap: nowrap; }
 
-.header_banner .title_and_menu .title { background-color: #2c2c2c; height: 85px; width: 175px; margin-left: 100px; padding: 0 5px 0 5px; display: flex; flex-direction: row; align-items: center; justify-content: center; position: relative; }
+.empty { width: 100px; }
 
-.header_banner .title_and_menu .title .outline { position: absolute; top: 10px; right: 10px; width: 40px; height: 20px; border-top: 4px solid white; border-right: 4px solid white; }
+.title { background-color: #2c2c2c; height: 70px; width: 150px; padding: 0 5px 0 5px; display: flex; flex-direction: row; align-items: center; justify-content: center; position: relative; }
 
-.header_banner .title_and_menu .title h1 { font: 400 23px/1.25 "Roboto Condensed", sans-serif; color: #ffffff; text-align: center; }
+.title .outline { position: absolute; top: 5px; right: 10px; width: 40px; height: 20px; border-top: 2px solid white; border-right: 2px solid white; }
+
+.title h1 { font: 400 23px/1.25 "Roboto Condensed", sans-serif; color: #ffffff; text-align: center; letter-spacing: 2px; }
 
 .header_banner .title_and_menu .nav_menu { flex: 80%; display: flex; flex-direction: row; flex-wrap: wrap; align-items: center; justify-content: flex-end; margin-right: 60px; }
 
-.nav_item { display: block; font: 300 18px/1.25 "Roboto Condensed", sans-serif; color: #2c2c2c; margin: 0; padding: 2vw 1vw 0 0; transition: 0.3s; }
+.nav_item { display: block; font: 300 18px/1.25 "Roboto Condensed", sans-serif; color: #2c2c2c; margin: 0; padding: 0vw 1vw 0 0; transition: 0.3s; }
 
 .nav_item:hover { color: blue; transition-timing-function: ease-out; transition: 0.3s; }
 
-@media screen and (max-width: 840px) { .header_banner .title_and_menu { flex-direction: column; align-items: center; } .header_banner .title_and_menu .title { font: 400 50px/0.8 "Roboto Condensed", sans-serif; padding: 0; } .header_banner { height: 80px; } }
-
 /*home page*/
-.front_page { width: 100vw; height: 100vh; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; }
+.front_page { width: 100vw; height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; }
 
-.outline { position: absolute; top: -5px; right: -15px; width: 40px; height: 20px; border-top: 4px solid white; border-right: 4px solid white; }
+.shadow_box { background-color: rgba(0, 0, 0, 0.4); height: 200px; width: 400px; position: relative; display: flex; flex-direction: column; align-items: center; }
 
-.front_text { font: 400 25px/1.25 "Roboto Condensed", sans-serif; color: #ffffff; text-align: left; letter-spacing: 2px; position: relative; }
+.outline { position: absolute; top: 10px; right: 10px; width: 60px; height: 30px; border-top: 4px solid white; border-right: 4px solid white; }
 
-.front_sub_title { font: 400 20px/1.25 "Roboto Condensed", sans-serif; color: #ffffff; text-align: center; letter-spacing: 0px; }
+.front_text { font: 700 50px/1 "Roboto Condensed", sans-serif; color: #ffffff; text-align: left; letter-spacing: 2px; position: relative; transition: .2s ease-in-out; }
+
+.front_sub_title { padding-top: 15px; font: 400 30px/1 "Roboto Condensed", sans-serif; color: #ffffff; text-align: center; letter-spacing: 0px; transition: .2s ease-in-out; }
+
+.front_text:hover { color: #db2d0e; transition: .2s ease-in-out; }
+
+.front_sub_title:hover { color: #db2d0e; transition: .2s ease-in-out; }
+
+/*main menu*/
+.main_menu { width: 100%; display: flex; flex-direction: row; flex-wrap: nowrap; align-items: center; justify-content: space-evenly; }
+
+.chapter { position: relative; flex: 25%; min-width: 150px; max-width: 250px; height: 60vh; margin: 10px 5px 10px 5px; display: flex; align-items: center; justify-content: center; overflow: hidden; box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4), 4px 5px 8px rgba(0, 0, 0, 0.2); transition-timing-function: ease-out; transition: 0.3s; }
+
+.chapter_cover { height: 100%; transition-timing-function: ease-out; transition: 0.3s; }
+
+.chapter_title { font: 700 30px/1.25 "Roboto Condensed", sans-serif; color: #ffffff; position: absolute; text-align: center; width: 100%; top: 30px; left: 0; opacity: 0; }
+
+.chapter:hover .chapter_cover { opacity: 0.5; height: 110%; transition-timing-function: ease-out; transition: 0.3s; }
+
+.chapter:hover .chapter_title { opacity: 1; color: #000000; }
+
+.chapter_with_text { flex: 25%; min-width: 225px; max-width: 250px; margin: 10px 5px 10px 5px; display: flex; align-items: flex-start; justify-content: center; overflow: hidden; }
+
+.chapter_with_text p { text-align: justify; font: 700 16px/1.5 "Roboto Condensed", sans-serif; }
+
+@media screen and (max-width: 710px) { .main_menu { flex-wrap: wrap; } .main_menu .chapter_with_text { flex: 40%; } .main_menu .chapter { flex: 40%; } }
 
 /*grid galery*/
-.side_box { flex: 15%; display: flex; flex-direction: column; flex-wrap: nowrap; min-width: 100px; }
+.gallery_box { flex: 100%; display: flex; flex-direction: column; flex-wrap: nowrap; align-items: center; padding: 20px 10px 10px 10px; }
 
-.gallery_box { flex: 100%; display: flex; flex-direction: column; flex-wrap: nowrap; align-items: center; }
+.gallery_box .gallery { align-self: center; flex: 100%; max-width: 1100px; display: flex; flex-direction: column; flex-wrap: nowrap; align-items: flex-start; }
 
-.gallery_box .gallery { flex: 80%; display: flex; flex-direction: column; flex-wrap: nowrap; }
-
-.gallery_box .gallery .gallery_line { flex: 100%; display: flex; flex-direction: row; flex-wrap: nowrap; }
+.gallery_box .gallery .gallery_line { align-self: center; flex: 100%; display: flex; flex-direction: row; flex-wrap: nowrap; }
 
 .gallery_box .gallery .gallery_line .container { width: 25%; }
 
-.gallery_box .gallery .gallery_line .container .thumbnail { width: 100%; height: 0; padding-bottom: 70%; overflow: hidden; /* object-fit: cover; box-shadow: 1px 1px 2px rgba($color: #000000, $alpha: 0.6) , 2px 2px 4px rgba($color: #000000, $alpha: 0.3);*/ }
+.gallery_box .gallery .gallery_line .container .thumbnail { width: 100%; height: 0; padding-top: 35%; padding-bottom: 35%; overflow: hidden; display: flex; flex-direction: row; align-items: center; justify-content: center; }
 
 .gallery_box .gallery .gallery_line .container .thumbnail img { width: 100%; transition: .5s ease-in-out; position: relative; top: 0; left: 0; }
 
-.thumbnail img:hover { opacity: 0.6; transition: .5s ease-in-out; }
+.thumbnail img:hover { opacity: 0.5; width: 110%; transition: .5s ease-in-out; }
 
 /*text*/
 .text_container { flex: 40%; position: relative; margin: 50px 150px 50px 50px; padding: 50px; background-color: white; text-align: justify; }
@@ -79,13 +105,15 @@ small { font: 300 12px/10 "Roboto Condensed", sans-serif; color: #333333; margin
 /*----------------------modal stuff----------------------*/
 /*----------------modal gallery----------------*/
 /* background */
-.modal { display: none; position: fixed; z-index: 3; padding: 0; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: #000000; /* Fallback color */ background-color: rgba(0, 0, 0, 0.9); vertical-align: middle; }
+.modal { display: none; position: fixed; z-index: 3; padding: 0; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: #ffffff; vertical-align: middle; flex-direction: row; flex-wrap: nowrap; }
+
+@media screen and (max-width: 670px) { .modal { flex-direction: column; } }
 
 /* Modal Content (image) */
-.modal_content { margin: auto; display: block; width: 100%; height: 100%; object-fit: scale-down; /*to make it harder to download*/ /* also add draggable="false"; to it in html */ /* menu has been desactivated with js */ }
+.modal_content { flex: 75%; margin: auto; display: block; /* width: 100%;*/ max-height: 95%; object-fit: scale-down; /*to make it harder to download*/ /* also add draggable="false"; to it in html */ /* menu has been desactivated with js */ }
 
 /* Caption of Modal Image */
-#Caption { display: block; position: fixed; top: 10px; right: 70px; background: white; /*fallback*/ background-color: rgba(255, 255, 255, 0.6); padding: 10px; text-align: right; font: 400 16px/1 "Montserrat", sans-serif; color: #000000; }
+#Caption { flex: 25%; min-width: 200px; background: white; padding: 70px 20px 10px 20px; text-align: justify; font: 400 16px/1 "Roboto Condensed", sans-serif; color: #2c2c2c; }
 
 /* Add Animation */
 .modal_content, #caption { -webkit-animation-name: zoom; -webkit-animation-duration: 0.6s; animation-name: zoom; animation-duration: 0.6s; }
@@ -97,13 +125,13 @@ small { font: 300 12px/10 "Roboto Condensed", sans-serif; color: #333333; margin
   to { transform: scale(1); } }
 
 /* all the control Button */
-.close { position: fixed; top: 10px; right: 10px; height: 50px; width: 50px; background-color: #ffffff; color: #000000; font-size: 35px; padding: 5px; font-weight: bold; text-align: center; -webkit-user-select: none; /* Safari */ -ms-user-select: none; /* IE 10+ and Edge */ user-select: none; /* Standard syntax */ }
+.close { position: fixed; top: 10px; right: 10px; height: 50px; width: 50px; background-color: #2c2c2c; color: #ffffff; font-size: 35px; padding: 5px; font-weight: bold; text-align: center; -webkit-user-select: none; /* Safari */ -ms-user-select: none; /* IE 10+ and Edge */ user-select: none; /* Standard syntax */ }
 
 .close:hover, .close:focus { color: #98301b; text-decoration: none; cursor: pointer; }
 
-.prev { cursor: pointer; position: fixed; right: 10px; top: 130px; height: 50px; width: 50px; padding: 10px; background-color: #ffffff; color: #000000; font-weight: bold; font-size: 20px; text-align: center; -webkit-user-select: none; /* Safari */ -ms-user-select: none; /* IE 10+ and Edge */ user-select: none; /* Standard syntax */ }
+.prev { cursor: pointer; position: fixed; right: 130px; top: 10px; height: 50px; width: 50px; padding: 10px; background-color: #2c2c2c; color: #ffffff; font-weight: bold; font-size: 20px; text-align: center; -webkit-user-select: none; /* Safari */ -ms-user-select: none; /* IE 10+ and Edge */ user-select: none; /* Standard syntax */ }
 
-.next { cursor: pointer; position: fixed; right: 10px; top: 70px; height: 50px; width: 50px; padding: 10px; background-color: #ffffff; color: #000000; font-weight: bold; font-size: 20px; text-align: center; -webkit-user-select: none; /* Safari */ -ms-user-select: none; /* IE 10+ and Edge */ user-select: none; /* Standard syntax */ }
+.next { cursor: pointer; position: fixed; right: 70px; top: 10px; height: 50px; width: 50px; padding: 10px; background-color: #2c2c2c; color: #ffffff; font-weight: bold; font-size: 20px; text-align: center; -webkit-user-select: none; /* Safari */ -ms-user-select: none; /* IE 10+ and Edge */ user-select: none; /* Standard syntax */ }
 
 .info { /*hidden for now*/ display: none; cursor: pointer; position: fixed; bottom: 15vh; left: 2vw; width: auto; background-color: #ffffff; color: #000000; font-weight: bold; font-size: 30px; transition: 0.6s ease; -webkit-user-select: none; /* Safari */ -ms-user-select: none; /* IE 10+ and Edge */ user-select: none; /* Standard syntax */ }
 
