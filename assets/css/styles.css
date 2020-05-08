@@ -1,5 +1,5 @@
 /*whole website */
-body { margin: 0; padding: 0; background-color: #ffffff; /* overflow-x: hidden;*/ }
+body { margin: 0; padding: 0; background-color: #e6ddda; /* overflow-x: hidden;*/ }
 
 html { box-sizing: border-box; }
 
@@ -44,11 +44,13 @@ small { font: 300 12px/10 "Roboto Condensed", sans-serif; color: #333333; margin
 
 .title h1 { font: 400 23px/1.25 "Roboto Condensed", sans-serif; color: #ffffff; text-align: center; letter-spacing: 2px; }
 
-.header_banner .title_and_menu .nav_menu { flex: 80%; display: flex; flex-direction: row; flex-wrap: wrap; align-items: center; justify-content: flex-end; margin-right: 60px; }
+.nav_menu { flex: 80%; display: flex; flex-direction: row; flex-wrap: wrap; align-items: center; justify-content: flex-end; margin-right: 60px; }
 
-.nav_item { display: block; font: 300 18px/1.25 "Roboto Condensed", sans-serif; color: #2c2c2c; margin: 0; padding: 0vw 1vw 0 0; transition: 0.3s; }
+.nav_item { display: block; text-align: center; font: 300 18px/1.25 "Roboto Condensed", sans-serif; color: #2c2c2c; margin: 0; padding: 0vw 0.5vw 0 0.5vw; transition: 0.3s; }
 
-.nav_item:hover { color: blue; transition-timing-function: ease-out; transition: 0.3s; }
+.nav_item:hover { font: 300 20px/1.25 "Roboto Condensed", sans-serif; transition-timing-function: ease-out; transition: 0.3s; }
+
+@media screen and (max-width: 600px) { .empty { display: none; } .nav_menu { justify-content: center; } .nav_item { flex: 50%; } }
 
 /*home page*/
 .front_page { width: 100vw; height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; }
@@ -68,44 +70,46 @@ small { font: 300 12px/10 "Roboto Condensed", sans-serif; color: #333333; margin
 /*main menu*/
 .main_menu { width: 100%; display: flex; flex-direction: row; flex-wrap: nowrap; align-items: center; justify-content: space-evenly; }
 
-.chapter { position: relative; flex: 25%; min-width: 150px; max-width: 250px; height: 60vh; margin: 10px 5px 10px 5px; display: flex; align-items: center; justify-content: center; overflow: hidden; box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4), 4px 5px 8px rgba(0, 0, 0, 0.2); transition-timing-function: ease-out; transition: 0.3s; }
+.chapter { position: relative; flex: 25%; min-width: 150px; max-width: 250px; height: 60vh; min-height: 290px; margin: 10px 5px 10px 5px; display: flex; align-items: center; justify-content: center; overflow: hidden; box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4), 4px 5px 8px rgba(0, 0, 0, 0.2); transition-timing-function: ease-out; transition: 0.3s; }
 
 .chapter_cover { height: 100%; transition-timing-function: ease-out; transition: 0.3s; }
 
-.chapter_title { font: 700 30px/1.25 "Roboto Condensed", sans-serif; color: #ffffff; position: absolute; text-align: center; width: 100%; top: 30px; left: 0; opacity: 0; }
+.chapter_title { font: 700 30px/1.25 "Roboto Condensed", sans-serif; color: #2c2c2c; position: absolute; text-align: center; width: 100%; top: 30px; left: 0; opacity: 0; background-color: rgba(255, 255, 255, 0.6); }
 
-.chapter:hover .chapter_cover { opacity: 0.5; height: 110%; transition-timing-function: ease-out; transition: 0.3s; }
+.chapter:hover .chapter_cover { /*opacity: 0.5;*/ height: 110%; transition-timing-function: ease-out; transition: 0.3s; }
 
 .chapter:hover .chapter_title { opacity: 1; color: #000000; }
 
-.chapter_with_text { flex: 25%; min-width: 225px; max-width: 250px; margin: 10px 5px 10px 5px; display: flex; align-items: flex-start; justify-content: center; overflow: hidden; }
+.chapter_with_text { flex: 25%; min-width: 225px; max-width: 250px; margin: 10px 5px 10px 5px; padding: 0; height: 60vh; min-height: 290px; /* box-shadow: 2px 2px 4px rgba($color: #000000, $alpha: 0.2), 4px 5px 8px rgba($color: #000000, $alpha: 0.1) ; */ }
 
-.chapter_with_text p { text-align: justify; font: 700 16px/1.5 "Roboto Condensed", sans-serif; }
+.chapter_with_text p { text-align: justify; font: 700 16px/1.5 "Roboto Condensed", sans-serif; position: relative; top: 0; margin: 0 0 16px 0; transition-timing-function: ease-in; transition: 0.3s; }
+
+.chapter_with_text p:hover { top: -10px; color: #000000; transition-timing-function: ease-out; transition: 0.3s; }
 
 @media screen and (max-width: 710px) { .main_menu { flex-wrap: wrap; } .main_menu .chapter_with_text { flex: 40%; } .main_menu .chapter { flex: 40%; } }
 
 /*grid galery*/
-.gallery_box { flex: 100%; display: flex; flex-direction: column; flex-wrap: nowrap; align-items: center; padding: 20px 10px 10px 10px; }
+.gallery_box { flex: 100%; display: flex; flex-direction: column; flex-wrap: nowrap; align-items: center; padding: 20px 0px 10px 0px; }
 
 .gallery_box .gallery { align-self: center; flex: 100%; max-width: 1100px; display: flex; flex-direction: column; flex-wrap: nowrap; align-items: flex-start; }
 
-.gallery_box .gallery .gallery_line { align-self: center; flex: 100%; display: flex; flex-direction: row; flex-wrap: nowrap; }
+.gallery_box .gallery .gallery_line { align-self: center; width: 100%; display: flex; flex-direction: row; flex-wrap: nowrap; }
 
 .gallery_box .gallery .gallery_line .container { width: 25%; }
 
-.gallery_box .gallery .gallery_line .container .thumbnail { width: 100%; height: 0; padding-top: 35%; padding-bottom: 35%; overflow: hidden; display: flex; flex-direction: row; align-items: center; justify-content: center; }
+.thumbnail { width: 100%; height: 0; padding-top: 35%; padding-bottom: 35%; overflow: hidden; background-color: #ffffff; display: flex; align-items: center; justify-content: center; overflow: hidden; }
 
-.gallery_box .gallery .gallery_line .container .thumbnail img { width: 100%; transition: .5s ease-in-out; position: relative; top: 0; left: 0; }
+.thumbnail img { width: 100%; transition: .5s ease-out; position: relative; top: 0; }
 
-.thumbnail img:hover { opacity: 0.5; width: 110%; transition: .5s ease-in-out; }
+.thumbnail:hover img { top: -15px; opacity: 0.6; transition: .3s ease-out; }
 
 /*text*/
-.text_container { flex: 40%; position: relative; margin: 50px 150px 50px 50px; padding: 50px; background-color: white; text-align: justify; }
+.text_container { flex: 40%; min-width: 500px; position: relative; margin: 50px 50px 50px 50px; padding: 50px; background-color: rgba(255, 255, 255, 0.9); text-align: justify; }
 
 /*----------------------modal stuff----------------------*/
 /*----------------modal gallery----------------*/
 /* background */
-.modal { display: none; position: fixed; z-index: 3; padding: 0; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: #ffffff; vertical-align: middle; flex-direction: row; flex-wrap: nowrap; }
+.modal { display: none; position: fixed; z-index: 3; padding: 0; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(255, 255, 255, 0.9); vertical-align: middle; flex-direction: row; flex-wrap: nowrap; }
 
 @media screen and (max-width: 670px) { .modal { flex-direction: column; } }
 
